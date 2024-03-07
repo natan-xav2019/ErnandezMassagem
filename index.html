@@ -1,39 +1,58 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ernandez Exelencia em massagem</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
+
 <body>
-    <div class="container">
-        <header>    
-            <h1>Ernandez exelencia e massagem</h1>
+    <div class="container-fluid">
+        <header>
+            <nav>
+                <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#introducao">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#horario">Horários</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contato">Contato</a>
+                    </li>
+                </ul>
+            </nav>
         </header>
         <main>
-            <img id="perfil" src="assets/img/ErnandezSorrindo.jpg" alt="Ernandez Sorrindo">
-            <div id="botoes">
-                <ul> <!-- usar esse site para fazer a apresentação da informação https://getbootstrap.com.br/docs/4.1/components/collapse/ -->
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Quem sou eu?</a></li>
-                    <li><a href="#">Horario de funcionamento</a></li>
-                    <li><a href="#">Contato</a></li>
-                </ul>
-            </div>
-            <div id="social-links">
-                <a href="https://www.facebook.com/Ernandezmassagem" target="_blank" rel="external"><ion-icon name="logo-facebook"></ion-icon></a>
-                <a href="https://www.instagram.com/ernandezmassagem" target="_blank" rel="external"><ion-icon name="logo-instagram"></ion-icon></a>  
-                <a href="https://www.linkedin.com/in/ernandez-siqueira-86a7861a6/" target="_blank" rel="external"><ion-icon name="logo-linkedin"></ion-icon></a>  
-            </div>
+            <section id="introducao">
+                <h3>Formação</h3>
+                <p>Sou massoterapeuta especializado em atletas de alta performance nos seguintes esportes Atletismo, Jiu-Jitsu, Judô, M.M.A, Remo e Surf.</p>
+            </section>
+            <section id="horario">
+                <h3>Horários</h3>
+                <p>Meu local de atendimento na praia de Copacabana, Rio de Janeiro:<br>Segunda a Quinta-Feira.<br>Só a chuva, frio e vento forte me tira do trabalho.</p>
+            </section>
+            <section id="contato">
+                <h3>Contatos</h3>
+                <div class="social-links">
+                    <a href="https://wa.me/5521999581462" target="_blank"
+                        rel="external"><ion-icon name="logo-whatsapp"></ion-icon></a>
+                    <a href="https://www.facebook.com/Ernandezmassagem" target="_blank" rel="external"><ion-icon
+                            name="logo-facebook"></ion-icon></a>
+                    <a href="https://www.instagram.com/ernandezmassagem" target="_blank" rel="external"><ion-icon
+                            name="logo-instagram"></ion-icon></a>
+                    <a href="https://www.linkedin.com/in/ernandez-siqueira-86a7861a6/" target="_blank"
+                        rel="external"><ion-icon name="logo-linkedin"></ion-icon></a>        
+                </div>
+            </section>
         </main>
     </div>
-    <footer>
-        <p>Feito por Natan Xavier</p>
-    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
         integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
         crossorigin="anonymous"></script>
@@ -43,4 +62,5 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
+
 </html>

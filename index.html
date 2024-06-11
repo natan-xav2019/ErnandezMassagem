@@ -8,11 +8,13 @@
     <title>Ernandez Exelencia em massagem</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 
 <body>
-    <div class="container-fluid">
+    <div>
         <header>
             <nav>
                 <ul class="nav justify-content-center">
@@ -23,6 +25,12 @@
                         <a class="nav-link" href="#horario">Horários</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="#preco">Preço</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#local">Local</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#contato">Contato</a>
                     </li>
                 </ul>
@@ -30,25 +38,115 @@
         </header>
         <main>
             <section id="introducao">
-                <h3>Formação</h3>
-                <p>Sou massoterapeuta especializado em atletas de alta performance nos seguintes esportes Atletismo, Jiu-Jitsu, Judô, M.M.A, Remo e Surf.</p>
+                <h2>Formação</h2>
+                <p>Sou massoterapeuta especializado em atletas de alta performance nos seguintes esportes Atletismo,
+                    Jiu-Jitsu, Judô, M.M.A, Remo e Surf.</p>
             </section>
             <section id="horario">
-                <h3>Horários</h3>
-                <p>Meu local de atendimento na praia de Copacabana, Rio de Janeiro:<br>Segunda a Quinta-Feira.<br>Só a chuva, frio e vento forte me tira do trabalho.</p>
+                <h2>Horários de atendimento</h2>
+                <table class="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col" scope="col">dia</th>
+                            <th scope="col" scope="col">Horário</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Segunda-feira</td>
+                            <td>11:00 ás 18:00</td>
+                        </tr>
+                        <tr>
+                            <td>Terça-feira</td>
+                            <td>11:00 ás 18:00</td>
+                        </tr>
+                        <tr>
+                            <td>Quarta-feira</td>
+                            <td>11:00 ás 18:00</td>
+                        </tr>
+                        <tr>
+                            <td>Quinta-feira</td>
+                            <td>11:00 ás 18:00</td>
+                        </tr>
+                        <tr>
+                            <td>Sexta-feira</td>
+                            <td>11:00 ás 18:00</td>
+                        </tr>
+                        <tr>
+                            <td>Sabado</td>
+                            <td>11:00 ás 18:00</td>
+                        </tr>
+                        <tr>
+                            <td>Domingo</td>
+                            <td>11:00 ás 18:00</td>
+                        </tr>
+                        <tr>
+                            <td>Feriado</td>
+                            <td>11:00 ás 18:00</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>Só a chuva, frio e vento forte me tirão do trabalho.</p>
+            </section>
+            <section id="preco">
+                <h2>Preços</h2>
+                <table class="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">Duração</th>
+                            <th scope="col">Praia</th>
+                            <th scope="col">Privado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>00:15</td>
+                            <td>R$ 50,00</td>
+                            <td> - </td>
+                        </tr>
+                        <tr>
+                            <td>00:30</td>
+                            <td>R$ 100,00</td>
+                            <td> - </td>
+                        </tr>
+                        <tr>
+                            <td>00:45</td>
+                            <td>R$ 150,00</td>
+                            <td> - </td>
+                        </tr>
+                        <tr>
+                            <td>01:00</td>
+                            <td>R$ 200,00</td>
+                            <td> - </td>
+                        </tr>
+                        <tr>
+                            <td>01:30</td>
+                            <td> - </td>
+                            <td>R$ 400,00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section id="local">
+                <h2>Localização</h2>
+                <div id="map"></div>
+                <address>
+                    <h3>Endereço</h3>
+                    <p>Na faixa de areia da praia - Av. Atlântica, nº 3264 - Copacabana, Rio de Janeiro - RJ, 22070-001</p>
+                </address>
             </section>
             <section id="contato">
-                <h3>Contatos</h3>
-                <div class="social-links">
-                    <a href="https://wa.me/5521999581462" target="_blank"
-                        rel="external"><ion-icon name="logo-whatsapp"></ion-icon></a>
-                    <a href="https://www.facebook.com/Ernandezmassagem" target="_blank" rel="external"><ion-icon
-                            name="logo-facebook"></ion-icon></a>
-                    <a href="https://www.instagram.com/ernandezmassagem" target="_blank" rel="external"><ion-icon
-                            name="logo-instagram"></ion-icon></a>
-                    <a href="https://www.linkedin.com/in/ernandez-siqueira-86a7861a6/" target="_blank"
-                        rel="external"><ion-icon name="logo-linkedin"></ion-icon></a>        
-                </div>
+                <h2>Contatos</h2>
+                <ul class="social-links">
+                    <li><a href="https://wa.me/5521999581462" target="_blank" rel="external"><ion-icon
+                        name="logo-whatsapp"></ion-icon></a></li>
+                    <li><a href="https://www.facebook.com/Ernandezmassagem" target="_blank" rel="external"><ion-icon
+                        name="logo-facebook"></ion-icon></a></li>
+                    <li><a href="https://www.instagram.com/ernandezmassagem" target="_blank" rel="external"><ion-icon
+                        name="logo-instagram"></ion-icon></a></li>
+                    <li><a href="https://www.linkedin.com/in/ernandez-siqueira-86a7861a6/" target="_blank"
+                        rel="external"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+                    </ul>
             </section>
         </main>
     </div>
@@ -61,6 +159,18 @@
         crossorigin="anonymous"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script>
+        var map = L.map('map').setView([-22.977599133305358, -43.18867740843111], 20);
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+        L.marker([-22.97767444986007, -43.18835822556427]).addTo(map);
+
+    </script>
 </body>
 
 </html>

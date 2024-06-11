@@ -28,3 +28,48 @@ main {
     padding-top: 2rem;
     margin: 0 30%;
 }
+
+main h2{
+    font-size: 2rem;
+    text-align: center;
+}
+
+main h3{
+    font-size: 1.3rem;
+}
+
+section div#map {
+    height: 360px;
+}
+
+address {
+    margin-top: 1rem;
+}
+
+ul.social-links {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    
+    padding: 0;
+    
+    list-style: none;
+}
+
+ul.social-links a {
+    font-size: 3rem;
+    transition: .3s;
+    color: #4c87df;
+    /* #0D6EFD */
+}
+
+ul.social-links a:hover {
+    color:rgb(239, 239, 239);
+}
+
+@media screen and (max-width: 600px) {
+    main {
+        padding-top: 2rem;
+        margin: 0 10px;
+    }
+}

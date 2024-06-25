@@ -66,9 +66,9 @@ section#local > iframe {
     margin: auto;
 
     height: 35vh;
-    min-height: 250px;
-    width: 40vw;
-    min-width: 360px;
+    min-height: 300px;
+    width: 50vw;
+    min-width: 200px;
 }
 
 address {
@@ -120,9 +120,6 @@ section#contato {
 }
 
 @media screen and (max-width: 600px) {
-    body {
-        background-position: center;
-    }
 
 
     nav ul li a.nav-link{
@@ -135,6 +132,10 @@ section#contato {
 
     nav {
         margin-top: 20px;
+    }
+
+    section#local > iframe {
+        width: 85vw;
     }
 
     ul.social-links a  {

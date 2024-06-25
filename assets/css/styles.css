@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
 
+:root {
+    --color-nav-link: rgb(0, 0, 0);
+    --color-nav-link-hover: rgb(255, 255, 255);
+    --color-conteudo: rgba(166, 235, 249, 0.6);
+    --border-radius-conteudo : 20px;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,26 +14,38 @@
 }
 
 body {
-    background-color: rgb(188, 224, 246);
-
+    background-image: url(../img/FotoFrenteErnandez.png);
+    background-position: center;
+    background-color: rgba(166, 235, 249);
+    background-size: cover;
     font-family: 'Roboto', sans-serif;
 }
 
 .nav-link {
     font-size: 2rem;
-    color: white;
-    border-bottom: 3px solid white;
+    color: var(--color-nav-link);
+    border-bottom: 3px solid var(--color-nav-link);
     transition: 0.5s;
 }
 
 .nav-link:hover {
-    color: black;
-    border-bottom: 3px solid black;
+    color: var(--color-nav-link-hover);
+    border-bottom: 3px solid var(--color-nav-link-hover);
+}
+
+nav {
+    background-color: var(--color-conteudo);
+    margin: 10px 20% 0px 20%;
+    border-top-left-radius: var(--border-radius-conteudo);
+    border-top-right-radius: var(--border-radius-conteudo);
 }
 
 main {
-    padding-top: 2rem;
-    margin: 0 20%;
+    background-color: var(--color-conteudo);
+    margin: 0px 20% 10px 20%;
+    padding: 2rem 1rem;
+    border-bottom-left-radius: var(--border-radius-conteudo);
+    border-bottom-right-radius: var(--border-radius-conteudo);
 }
 
 main h2{
@@ -49,7 +68,7 @@ section#local > iframe {
     height: 35vh;
     min-height: 250px;
     width: 40vw;
-    min-width: 382px;
+    min-width: 360px;
 }
 
 address {
@@ -101,18 +120,21 @@ section#contato {
 }
 
 @media screen and (max-width: 600px) {
+    body {
+        background-position: center;
+    }
+
+
     nav ul li a.nav-link{
         font-size: 2rem;
     }
 
-    main {
+    main, nav {
         margin: 0 10px;
     }
 
-    section#local > iframe {
-    
-        height: 250px;
-        width: 400px;
+    nav {
+        margin-top: 20px;
     }
 
     ul.social-links a  {

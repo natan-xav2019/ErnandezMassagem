@@ -1,64 +1,79 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
 
-:root {
+@font-face {
+    font-family: 'stop regular';
+    src: url(../font/stopregular.otf) format('opentype');
+}
+
+:root{
     --color-nav-link: rgb(0, 0, 0);
     --color-nav-link-hover: rgb(255, 255, 255);
     --color-conteudo: rgba(166, 235, 249, 0.6);
     --border-radius-conteudo : 20px;
 }
 
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: content-box;
 }
 
 body {
-    background-image: url(../img/FotoFrenteErnandez.png);
     background-position: center;
     background-color: rgba(166, 235, 249);
     background-size: cover;
     font-family: 'Roboto', sans-serif;
 }
 
-.nav-link {
-    font-size: 2rem;
-    color: var(--color-nav-link);
-    border-bottom: 3px solid var(--color-nav-link);
-    transition: 0.5s;
-}
-
-.nav-link:hover {
-    color: var(--color-nav-link-hover);
-    border-bottom: 3px solid var(--color-nav-link-hover);
-}
-
-nav {
-    background-color: var(--color-conteudo);
-    margin: 10px 20% 0px 20%;
-    border-top-left-radius: var(--border-radius-conteudo);
-    border-top-right-radius: var(--border-radius-conteudo);
-}
-
 main {
     background-color: var(--color-conteudo);
-    margin: 0px 20% 10px 20%;
-    padding: 2rem 1rem;
-    border-bottom-left-radius: var(--border-radius-conteudo);
-    border-bottom-right-radius: var(--border-radius-conteudo);
-}
-
-main h2{
-    font-size: 2rem;
-    text-align: center;
-}
-
-main h3{
-    font-size: 1.3rem;
+    margin: 10px 20% 10px 20%;
+    padding: 0rem 1rem;
+    border-radius: var(--border-radius-conteudo);
 }
 
 main p {
     margin-bottom: 0px;
+}
+
+section#introducao {
+    margin-bottom: 1em;
+}
+
+section#introducao h1 {
+    display: inline;
+    margin: 0 auto;
+    text-align: center;
+    text-transform: uppercase;
+
+    font-family: 'stop regular','sans-serif';
+    font-size: 3em;
+    font-weight: 800;
+
+    border-bottom: 3px solid red;
+}
+
+section#introducao > div.logo-perfil {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+section#introducao > div.logo-perfil > img {
+
+    width: 50%;
+    min-width: 300px;
+
+    border: 1px solid black;
+    border-radius: 10%;
+    box-shadow: 4px 4px 15px 0px rgba(0, 0, 0, 0.4)
+}
+
+section#preco {
+    margin-top: 1rem;
 }
 
 section#local > iframe {
@@ -121,17 +136,8 @@ section#contato {
 
 @media screen and (max-width: 600px) {
 
-
-    nav ul li a.nav-link{
-        font-size: 2rem;
-    }
-
-    main, nav {
-        margin: 0 10px;
-    }
-
-    nav {
-        margin-top: 20px;
+    main {
+        margin: 10px;
     }
 
     section#local > iframe {
@@ -140,5 +146,9 @@ section#contato {
 
     ul.social-links a  {
         font-size: 2.3rem;
+    }
+
+    section#introducao > div.logo-perfil > img {
+        width: 75%;
     }
 }

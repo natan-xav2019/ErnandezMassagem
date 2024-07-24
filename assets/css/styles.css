@@ -7,7 +7,7 @@
 
 :root{
     --color-nav-link: rgb(0, 0, 0);
-    --color-nav-link-hover: rgb(255, 255, 255);
+    --color-nav-link-hover: rgba(166, 235, 249, 0.6);
     --color-conteudo: rgba(166, 235, 249, 0.6);
     --border-radius-conteudo : 20px;
 }
@@ -20,20 +20,24 @@
 
 body {
     background-position: center;
-    background-color: rgba(166, 235, 249);
+    background-color: rgb(222, 245, 249);
     background-size: cover;
     font-family: 'Roboto', sans-serif;
 }
 
 main {
-    background-color: var(--color-conteudo);
     margin: 10px 20% 10px 20%;
     padding: 0rem 1rem;
     border-radius: var(--border-radius-conteudo);
 }
 
-main p {
-    margin-bottom: 0px;
+p {
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+p > strong {
+    font-size: 1.2rem;
 }
 
 section#introducao {
@@ -114,6 +118,7 @@ ul.social-links {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: nowrap;
+    margin-top: 2rem;
     
     padding: 0;
     
@@ -123,11 +128,38 @@ ul.social-links {
 ul.social-links a {
     font-size: 3rem;
     transition: .3s;
-    color: #4c87df;
 }
 
-ul.social-links a:hover {
-    color:rgb(239, 239, 239);
+ul.social-links ion-icon[name="logo-whatsapp"] {
+    color: rgb(37, 211, 102);
+}
+
+ul.social-links ion-icon[name="logo-facebook"] {
+    color: rgb(59, 89, 152);
+}
+
+ul.social-links ion-icon[name="logo-instagram"] {
+    color: rgb(225, 48, 108);
+}
+
+ul.social-links ion-icon[name="logo-linkedin"] {
+    color: rgb(14, 118, 168);
+}
+
+ul.social-links ion-icon[name="logo-whatsapp"]:hover {
+    color: rgba(40, 211, 102, 0.5);
+}
+
+ul.social-links ion-icon[name="logo-facebook"]:hover {
+    color: rgb(59, 89, 152, 0.5);
+}
+
+ul.social-links ion-icon[name="logo-instagram"]:hover {
+    color: rgba(225, 48, 108, 0.5);
+}
+
+ul.social-links ion-icon[name="logo-linkedin"]:hover {
+    color: rgb(14, 118, 168, 0.5);
 }
 
 section#contato {

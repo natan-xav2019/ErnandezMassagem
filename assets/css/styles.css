@@ -5,6 +5,11 @@
     src: url(../font/stopregular.otf) format('opentype');
 }
 
+@font-face {
+    font-family: 'Brush Script';
+    src: url(../font/BrushScriptOpti-Regular.otf) format('opentype');
+}
+
 :root{
     --color-nav-link: rgb(0, 0, 0);
     --color-nav-link-hover: rgba(166, 235, 249, 0.6);
@@ -20,7 +25,7 @@
 
 body {
     background-position: center;
-    background-color: rgb(222, 245, 249);
+    background-image: linear-gradient(to right, rgb(176, 238, 249), #ffffff);
     background-size: cover;
     font-family: 'Roboto', sans-serif;
 }
@@ -28,7 +33,6 @@ body {
 main {
     margin: 10px 20% 10px 20%;
     padding: 0rem 1rem;
-    border-radius: var(--border-radius-conteudo);
 }
 
 p {
@@ -44,36 +48,87 @@ section#introducao {
     margin-bottom: 1em;
 }
 
-section#introducao h1 {
-    display: inline;
-    margin: 0 auto;
-    text-align: center;
-    text-transform: uppercase;
-
-    font-family: 'stop regular','sans-serif';
-    font-size: 3em;
-    font-weight: 800;
-
-    border-bottom: 3px solid red;
-}
 
 section#introducao > div.logo-perfil {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    margin-bottom: 1rem;
 }
 
-section#introducao > div.logo-perfil > img {
+section#introducao > div.logo-perfil > h1 {
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+    text-transform: uppercase;
+    height: 66px;
 
+    font-family: 'stop regular','sans-serif';
+    font-size: 4rem;
+    font-weight: 800;
+    
+    
+    border-bottom: 2px solid red;
+}
+
+section#introducao > div.logo-perfil > p {
+    font-family: 'Brush Script','sans-serif';
+    font-size: 1.6rem;
+    margin: 0;
+    padding: 0;
+}
+
+section#introducao > div.logo-perfil > p > span {
+    color: red;
+}
+
+section#introducao > div.imagem-perfil {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+section#introducao > div.imagem-perfil > img {
     width: 50%;
     min-width: 300px;
-
     border: 1px solid black;
+
     border-radius: 10%;
     box-shadow: 4px 4px 15px 0px rgba(0, 0, 0, 0.4)
+}
+
+section#introducao > h2 {
+    text-align: center;
+    font-size: 2rem;
+}
+section#introducao > ul.atletas {
+    list-style-type: none;
+    margin: 0;
+    margin-top: 1rem;
+    padding: 0;
+}
+
+section#introducao > ul.atletas > li {
+    position: relative;
+    list-style-type: none;
+    padding-left: 35px;
+}
+
+section#introducao > ul.atletas > li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 25px;
+    background-image: url('../img/personList.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
 }
 
 section#preco {
@@ -170,6 +225,7 @@ section#contato {
 
     main {
         margin: 10px;
+        padding: 0rem 1rem;
     }
 
     section#local > iframe {
@@ -180,7 +236,7 @@ section#contato {
         font-size: 2.3rem;
     }
 
-    section#introducao > div.logo-perfil > img {
+    section#introducao > div.imagem-perfil > img {
         width: 75%;
     }
 }

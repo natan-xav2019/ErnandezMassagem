@@ -10,14 +10,14 @@
     src: url(../font/BrushScriptOpti-Regular.otf) format('opentype');
 }
 
-:root{
+:root {
     --color-nav-link: rgb(0, 0, 0);
     --color-nav-link-hover: rgba(166, 235, 249, 0.6);
     --color-conteudo: rgba(166, 235, 249, 0.6);
-    --border-radius-conteudo : 20px;
+    --border-radius-conteudo: 20px;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: content-box;
@@ -40,7 +40,12 @@ p {
     text-align: justify;
 }
 
-p > strong {
+h3 {
+    font-weight: 800;
+    font-size: 2.1rem;
+}
+
+p>strong {
     font-size: 1.2rem;
 }
 
@@ -49,40 +54,40 @@ section#introducao {
 }
 
 
-section#introducao > div.logo-perfil {
+section#introducao>div.logo-perfil {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-section#introducao > div.logo-perfil > h1 {
+section#introducao>div.logo-perfil>h1 {
     display: inline-block;
     margin: 0 auto;
     text-align: center;
     text-transform: uppercase;
     height: 66px;
 
-    font-family: 'stop regular','sans-serif';
+    font-family: 'stop regular', 'sans-serif';
     font-size: 4rem;
     font-weight: 800;
-    
-    
+
+
     border-bottom: 2px solid red;
 }
 
-section#introducao > div.logo-perfil > p {
-    font-family: 'Brush Script','sans-serif';
+section#introducao>div.logo-perfil>p {
+    font-family: 'Brush Script', 'sans-serif';
     font-size: 1.6rem;
     margin: 0;
     padding: 0;
 }
 
-section#introducao > div.logo-perfil > p > span {
+section#introducao>div.logo-perfil>p>span {
     color: red;
 }
 
-section#introducao > div.imagem-perfil {
+section#introducao>div.imagem-perfil {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -90,7 +95,7 @@ section#introducao > div.imagem-perfil {
     margin: 10px 0;
 }
 
-section#introducao > div.imagem-perfil > img {
+section#introducao>div.imagem-perfil>img {
     width: 50%;
     min-width: 300px;
     border: 1px solid black;
@@ -99,24 +104,25 @@ section#introducao > div.imagem-perfil > img {
     box-shadow: 4px 4px 15px 0px rgba(0, 0, 0, 0.4)
 }
 
-section#introducao > h2 {
+section#introducao>h2 {
     text-align: center;
     font-size: 2rem;
 }
-section#introducao > ul.atletas {
+
+section#introducao>ul.atletas {
     list-style-type: none;
     margin: 0;
     margin-top: 1rem;
     padding: 0;
 }
 
-section#introducao > ul.atletas > li {
+section#introducao>ul.atletas>li {
     position: relative;
     list-style-type: none;
     padding-left: 35px;
 }
 
-section#introducao > ul.atletas > li::before {
+section#introducao>ul.atletas>li::before {
     content: '';
     position: absolute;
     left: 0;
@@ -135,7 +141,11 @@ section#preco {
     margin-top: 1rem;
 }
 
-section#local > iframe {
+section#local {
+    margin: 1em 0;
+}
+
+section#local>iframe {
     display: block;
     margin: auto;
 
@@ -149,7 +159,8 @@ address {
     margin-top: 1rem;
 }
 
-table tr td, table tr th {
+table tr td,
+table tr th {
     border: 1px solid rgba(0, 0, 0, 0.537);
     text-align: center;
 }
@@ -161,7 +172,7 @@ table thead tr {
 }
 
 table tbody tr {
-    background-color: #bcd4f7; 
+    background-color: #bcd4f7;
     font-weight: 500;
 }
 
@@ -174,9 +185,9 @@ ul.social-links {
     justify-content: space-evenly;
     flex-wrap: nowrap;
     margin-top: 2rem;
-    
+
     padding: 0;
-    
+
     list-style: none;
 }
 
@@ -221,6 +232,53 @@ section#contato {
     margin-bottom: 50px;
 }
 
+section#contato>form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+}
+
+section#contato>form>label {
+    font-size: 1.2rem;
+}
+
+section#contato>form>input,
+section#contato>form>textarea {
+    padding: 5px 10px;
+    border: 2px solid var(--color-conteudo);
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    transition: 0.5s border box-shadow;
+}
+
+section#contato>form>input:focus,
+section#contato>form>textarea:focus {
+    border: 2px solid rgb(109, 243, 255);
+    box-shadow: 2px 2px 10px 2px rgb(109, 243, 255);
+    outline: none;
+}
+
+section#contato>form>textarea {
+    height: 10rem;
+    min-height: 7rem;
+}
+
+section#contato>form>button {
+    margin-top: 0.3rem;
+    width: 45%;
+    align-self: center;
+    padding: 10px 0px;
+    background-color: #4c87df;
+    color: white;
+    border: none;
+    border-radius: 25px;
+}
+
+section#contato>form>button:hover {
+    background-color: #1973fa;
+}
+
 @media screen and (max-width: 600px) {
 
     main {
@@ -228,15 +286,24 @@ section#contato {
         padding: 0rem 1rem;
     }
 
-    section#local > iframe {
+    section#local>iframe {
         width: 85vw;
     }
 
-    ul.social-links a  {
+    ul.social-links a {
         font-size: 2.3rem;
     }
 
-    section#introducao > div.imagem-perfil > img {
+    section#introducao>div.imagem-perfil>img {
         width: 75%;
+    }
+
+    section#contato>form>textarea {
+        height: 13rem;
+        min-height: 10rem;
+    }
+
+    section#contato>form>button:hover {
+        width: 70%;
     }
 }

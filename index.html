@@ -108,14 +108,16 @@
             </section>
             <section id="contato">
                 <h3>Contact</h3>
-                <form action="" method="post">
+                <form action="https://formsubmit.co/ernandezmassagem@hotmail.com" method="post">
                     <label for="name">Name</label>
-                    <input type="text" name="name" id="name" required>
+                    <input type="text" name="name" id="name" placeholder="Your name" required>
                     <label for="email">E-mail</label>
-                    <input type="email" name="email" id="email" required>
+                    <input type="email" name="email" id="email" placeholder="Your email" required>
                     <label for="messagem">Message</label>
-                    <textarea name="messagem" id="messagem" required></textarea>
+                    <textarea name="message" id="message" placeholder="Your message" required></textarea>
                     <button type="submit">Enviar</button>
+                    <input type="hidden" name="_next" value="https://natan-xav2019.github.io/ErnandezMassagem/">
+                    <input type="hidden" name="_captcha" value="false">
                 </form>
                 <ul class="social-links">
                     <li><a href="https://wa.me/5521999581462" target="_blank" rel="external"><ion-icon
